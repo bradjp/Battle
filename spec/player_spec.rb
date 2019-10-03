@@ -10,13 +10,6 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'attacks the other player' do
-     expect(scratchy).to receive(:damaged)
-     itchy.attack(scratchy)
-    end
-  end
-
   describe '#damaged' do
     it 'reduces HP by 10' do
       expect { scratchy.damaged }.to change { scratchy.hp }.by -10    
