@@ -31,4 +31,8 @@ class Game
     player_2
   end
 
+  def defeated?
+    @current_turn.hp == 0
+  end
+
 end

@@ -35,7 +35,15 @@ enable :sessions
 
   post '/swap_turns' do
     $game.swap_turns
-    redirect '/play'
+    if $game.defeated?
+      redirect '/gameover'
+    else
+      redirect '/play'
+    end
+  end
+
+  get '/gameover' do
+    erb(:gameover)
   end
 
   # start the server if ruby file executed directly

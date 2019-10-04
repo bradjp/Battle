@@ -37,6 +37,15 @@ end
     end
   end
 
-
+  describe '#defeated?' do
+    it 'checks if a player has no HP' do
+    a = Player.new('A', 0)
+    b = Player.new('B', 0)
+    game = Game.new(a,b)
+    expect(game.defeated?).to eq true
+    end
+  end
+  
+  
 
 end

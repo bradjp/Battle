@@ -15,5 +15,6 @@ describe Player do
       expect { scratchy.damaged }.to change { scratchy.hp }.by -10    
     end
   end
+
 end
 
