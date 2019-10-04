@@ -3,4 +3,10 @@ feature 'Testing points' do
     sign_in_and_play
     expect(page).to have_content 'Scratchy: 100/100HP'
   end
+
+  scenario 'player 1 can see his own hit points' do
+    sign_in_and_play
+    expect(page).to have_content 'Itchy: 100/100HP'
+  end
+
 end
